@@ -1,0 +1,15 @@
+{
+  "name": "git_start",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "hw_1": "npx tsc ./HW_1/index_ts.ts --removeComments --t ES5 --outDir ./HW_1/compiled && node ./HW_1/compiled/index_ts.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^5.3.3"
+  }
+}
