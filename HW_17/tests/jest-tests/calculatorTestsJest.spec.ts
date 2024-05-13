@@ -1,9 +1,10 @@
 import {Calculator} from '../../src/calculator';
-
+import {addFunction, subtractFunction, multiplyFunction, divideFunction, powerFunction} from "../functions";
 
 
 describe('Jest', () => {
     let calculator: Calculator;
+    let result: number;
   
     beforeEach(() => {
       calculator = new Calculator();
@@ -12,94 +13,115 @@ describe('Jest', () => {
   
     describe('Addition', () => {
       test('Addition of positive numbers', () => {
-        expect(calculator.add(2, 3)).toBe(5);
-      });
+        const result = addFunction(2, 3);
+        expect(result).toBe(5);
+    });
   
       test('Adding a positive and negative number', () => {
-        expect(calculator.add(5, -3)).toBe(2);
+        result = addFunction(5, -3);
+        expect(result).toBe(2);
       });
   
       test('Error when passing a non-numeric value as the first argument', () => {
-        expect(() => calculator.add('2' as any, 3)).toThrow(TypeError);
+        const result = () => addFunction('2' as any, 3);
+        expect(result).toThrow(TypeError);
         });
 
       test('Error when passing a non-numeric value as the second argument', () => {
-        expect(() => calculator.add(2, '3' as any)).toThrow(TypeError);
+        const result = () => addFunction(2, '3' as any);
+        expect(result).toThrow(TypeError);
       });
      });
   
+
     describe('Subtraction', () => {
       test('Subtracting a positive number', () => {
-        expect(calculator.subtract(5, 3)).toBe(2);
+        result = subtractFunction(5, 3);
+        expect(result).toBe(2);
       });
   
       test('Subtracting a Negative Number', () => {
-        expect(calculator.subtract(5, -3)).toBe(8);
+        result = subtractFunction(5, -3);
+        expect(result).toBe(8);
         });
   
       test('Error when passing a non-numeric value as the first argument', () => {
-        expect(() => calculator.subtract('5' as any, 3)).toThrow(TypeError);
+        const result = () => subtractFunction('5' as any, 3);
+        expect(result).toThrow(TypeError);
        });
   
       test('Error when passing a non-numeric value as the second argument', () => {
-        expect(() => calculator.subtract(5, '3' as any)).toThrow(TypeError);
+        const result = () => subtractFunction(5, '3' as any);
+        expect(result).toThrow(TypeError);
        });
   });
   
   
     describe('Multiplication', () => {
       test('Multiplying Positive Numbers', () => {
-        expect(calculator.multiply(2, 3)).toBe(6);
+        result = multiplyFunction(2, 3);
+        expect(result).toBe(6);
       });
   
       test('Multiplying Negative Numbers', () => {
-        expect(calculator.multiply(-2, -3)).toBe(6);
+        result = multiplyFunction(-2, -3);
+        expect(result).toBe(6);
         });
   
       test('Error when passing a non-numeric value as the first argument', () => {
-        expect(() => calculator.multiply('2' as any, 3)).toThrow(TypeError);
+        const result = () => multiplyFunction('2' as any, 3);
+        expect(result).toThrow(TypeError);
         });
       
       test('Error when passing a non-numeric value as the second argument', () => {
-        expect(() => calculator.multiply(2, '3' as any)).toThrow(TypeError);
+        const result = () => multiplyFunction(2, '3' as any);
+        expect(result).toThrow(TypeError);
         });
     });
   
   
     describe('Division', () => {
       test('Dividing positive numbers', () => {
-        expect(calculator.divide(6, 3)).toBe(2);
+        result = divideFunction(6, 3);
+        expect(result).toBe(2);
       });
   
       test('Dividing negative numbers', () => {
-        expect(calculator.divide(-6, -3)).toBe(2);
+        result = divideFunction(-6, -3);
+        expect(result).toBe(2);
         });
   
       test('Division by zero', () => {
-        expect(() => calculator.divide(6, 0)).toThrow("Division by zero is not allowed");
+        const result = () => divideFunction(6, 0);
+        expect(result).toThrow("Division by zero is not allowed");
         });
   
       test('Error when passing a non-numeric value as the first argument', () => {
-        expect(() => calculator.divide('6' as any, 2)).toThrow(TypeError);
+        const result = () => divideFunction('6' as any, 2);
+        expect(result).toThrow(TypeError);
         });
       
       test('Error when passing a non-numeric value as the second argument', () => {
-        expect(() => calculator.divide(6, '2' as any)).toThrow(TypeError);
+        const result = () => divideFunction(6, '2' as any);
+        expect(result).toThrow(TypeError);
         });
     });
   
   
     describe('Power', () => {
       test('Raising a number to a power', () => {
-        expect(calculator.power(2, 3)).toBe(8);
+        result = powerFunction(2, 3);
+        expect(result).toBe(8);
       });
   
       test('Error when passing a non-numeric value as the first argument', () => {
-        expect(() => calculator.power('2' as any, 3)).toThrow(TypeError);
+        const result = () => powerFunction('2' as any, 3);
+        expect(result).toThrow(TypeError);
         });
       
       test('Error when passing a non-numeric value as the second argument', () => {
-        expect(() => calculator.power(2, '3' as any)).toThrow(TypeError);
+        const result = () => powerFunction(2, '3' as any);
+        expect(result).toThrow(TypeError);
         });
     });
   
