@@ -7,7 +7,8 @@
     "hw_1": "npx tsc ./HW_1/index_ts.ts --removeComments --t ES5 --outDir ./HW_1/compiled && node ./HW_1/compiled/index_ts.js",
     "format:code": "prettier --write \"**/*.js\"",
     "test_mocha": "mocha --config='HW_17/.mocharc.json'",
-    "test_jest": "jest --config='HW_18/jest.config.js'"
+    "test_jest": "jest --config='HW_18/jest.config.js'",
+    "wdio": "wdio run HW_22/wdio.conf.ts"
   },
   "keywords": [],
   "author": "",
@@ -18,17 +19,25 @@
     "@types/mocha": "^10.0.6",
     "@types/node": "^18.11.18",
     "@types/superagent": "^8.1.7",
+    "@wdio/globals": "^8.38.0",
     "assert": "^2.1.0",
     "chai": "^4.4.1",
     "cross-fetch": "^4.0.0",
     "jest": "^29.7.0",
     "mocha": "^10.4.0",
     "superagent": "^9.0.2",
-    "ts-jest": "^29.1.2",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.3.3"
+    "ts-jest": "^29.1.2"
   },
   "devDependencies": {
-    "prettier": "^3.2.5"
+    "@wdio/cli": "^8.38.1",
+    "@wdio/cucumber-framework": "^8.38.0",
+    "@wdio/local-runner": "^8.38.0",
+    "@wdio/spec-reporter": "^8.38.0",
+    "@wdio/types": "^8.37.0",
+    "@wdio/visual-service": "^4.1.3",
+    "prettier": "^3.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5",
+    "wdio-chromedriver-service": "^8.1.1"
   }
 }
