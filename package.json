@@ -7,7 +7,8 @@
     "hw_1": "npx tsc ./HW_1/index_ts.ts --removeComments --t ES5 --outDir ./HW_1/compiled && node ./HW_1/compiled/index_ts.js",
     "format:code": "prettier --write \"**/*.js\"",
     "test_mocha": "mocha --config='HW_17/.mocharc.json'",
-    "test_jest": "jest --config='HW_18/jest.config.js'"
+    "test_jest": "jest --config='HW_18/jest.config.js'",
+    "test_playwright": "playwright test --config= ./HW_23 playwright/playwright.config.ts"
   },
   "keywords": [],
   "author": "",
@@ -29,6 +30,7 @@
     "typescript": "^5.3.3"
   },
   "devDependencies": {
+    "@playwright/test": "^1.44.1",
     "prettier": "^3.2.5"
   }
 }
