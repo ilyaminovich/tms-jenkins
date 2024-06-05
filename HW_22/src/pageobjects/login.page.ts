@@ -1,8 +1,8 @@
 import { $ } from '@wdio/globals';
 import Page from './page';
-import { clickOnButton   } from '../utils/clickActions';
+import { clickOnElement } from '../utils/clickActions';
 
-
+//на этой странице оставила constructor для себя (пример разных реализаций), :) помню что желательно применять или constructor или get
 class LoginPage extends Page {
     public emailButton: string;
     public phoneButton: string;
@@ -27,11 +27,11 @@ class LoginPage extends Page {
         let inputField;
         if (loginOption === 'email') {
             const emailButton = await $(this.emailButton);
-            await clickOnButton(emailButton);
+            await clickOnElement(emailButton);
             inputField = await $(this.loginEmailField);
         } else if (loginOption === 'phone') {
             const phoneButton = await $(this.phoneButton);
-            await clickOnButton(phoneButton);
+            await clickOnElement(phoneButton);
             inputField = await $(this.phoneField);
         } else {
             throw new Error('Invalid login option');
@@ -39,13 +39,17 @@ class LoginPage extends Page {
 
         await inputField.setValue(loginEmailOrPhoneValue);
         const submitButton = await $(this.loginButton);
-        await clickOnButton(submitButton);
+        await clickOnElement(submitButton);
     }
 
     public async getErrorMessage() {
-        const errorMessageElement = await $(this.errorMessageLoggingInEmail);
-        const errorMessage = await errorMessageElement.getText();
-        return errorMessage;
+        return await $(this.errorMessageLoggingInEmail);
+    }
+
+    public async checkErrorMessage(expectedMessage: string) {
+        const errorMessageElement = await this.getErrorMessage();
+        await errorMessageElement.waitForDisplayed();
+        await expect(errorMessageElement).toHaveText(expectedMessage);
     }
 }
 
