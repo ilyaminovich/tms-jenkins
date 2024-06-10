@@ -7,7 +7,10 @@
     "hw_1": "npx tsc ./HW_1/index_ts.ts --removeComments --t ES5 --outDir ./HW_1/compiled && node ./HW_1/compiled/index_ts.js",
     "format:code": "prettier --write \"**/*.js\"",
     "test_mocha": "mocha --config='HW_17/.mocharc.json'",
-    "test_jest": "jest --config='HW_19/jest.config.js'"
+    "test_jest": "jest --config='HW_19/jest.config.js'",
+    "cypress": "npx cypress open --config-file=./HW_24_cypress/cypress/cypress.config.ts",
+    "cypress_result": "rm -rf ./HW_24_cypress/cypress/report/allure-report && rm -rf ./HW_24_cypress/cypress/report/allure-result && npx cypress open --config-file=./HW_24_cypress/cypress/cypress.config.ts",
+    "cypress_report": "allure generate ./HW_24_cypress/cypress/report/allure-result --clean -o ./HW_24_cypress/cypress/report/allure-report && allure open ./HW_24_cypress/cypress/report/allure-report"
   },
   "keywords": [],
   "author": "",
@@ -32,7 +35,11 @@
     "typescript": "^5.3.3"
   },
   "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^2.40.2",
     "@types/chromedriver": "^81.0.5",
+    "allure-commandline": "^2.29.0",
+    "allure-cypress": "^3.0.0-beta.3",
+    "cypress": "^13.11.0",
     "prettier": "^3.2.5"
   }
 }
