@@ -7,8 +7,8 @@
     "hw_1": "npx tsc ./HW_1/index_ts.ts --removeComments --t ES5 --outDir ./HW_1/compiled && node ./HW_1/compiled/index_ts.js",
     "format:code": "prettier --write \"**/*.js\"",
     "test_mocha": "mocha --config='HW_17/.mocharc.json'",
-    "test_jest": "jest --config='HW_18/jest.config.js'",
-    "test_playwright": "playwright test --config= ./HW_23 playwright/playwright.config.ts"
+    "test_playwright": "playwright test --config= ./HW_23 playwright/playwright.config.ts",
+    "test_jest": "jest --config='HW_19/jest.config.js'"
   },
   "keywords": [],
   "author": "",
@@ -17,13 +17,16 @@
     "@types/chai": "^4.3.15",
     "@types/jest": "^29.5.12",
     "@types/mocha": "^10.0.6",
-    "@types/node": "^18.11.18",
+    "@types/node": "^18.19.33",
+    "@types/selenium-webdriver": "^4.1.22",
     "@types/superagent": "^8.1.7",
     "assert": "^2.1.0",
     "chai": "^4.4.1",
+    "chromedriver": "^124.0.3",
     "cross-fetch": "^4.0.0",
     "jest": "^29.7.0",
     "mocha": "^10.4.0",
+    "selenium-webdriver": "^4.20.0",
     "superagent": "^9.0.2",
     "ts-jest": "^29.1.2",
     "ts-node": "^10.9.2",
@@ -31,6 +34,7 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.44.1",
+    "@types/chromedriver": "^81.0.5",
     "prettier": "^3.2.5"
   }
 }
