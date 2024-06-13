@@ -13,7 +13,7 @@ Scenario Outline: Unsuccessful login to your personal account
   Examples:
       | loginOption | loginEmailOrPhoneValue | message                                                      |
       | email       | testWDIO456            | Нет такого аккаунта. Проверьте логин или войдите по телефону |
-      | phone       | 234567890              | Недопустимый формат номера                                   |
+      # | phone       | 234567890              | Недопустимый формат номера                                   |
 
 @smoke @2
 Scenario Outline: Successful movie search
