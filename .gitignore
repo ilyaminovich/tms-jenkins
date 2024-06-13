@@ -4,5 +4,11 @@ HW_24_cypress/cypress/downloads/
 HW_24_cypress/cypress/screenshots/
 HW_24_cypress/cypress/videos/
 HW_24_cypress/cypress/report/
-
-
+HW_22/reports/
+HW_23 playwright/test-results/
+HW_23 playwright/playwright-report/
+HW_23 playwright/blob-report/
+HW_23 playwright/playwright/.cache/
+HW_23 playwright/allure-results/
+HW_23 playwright/allure-report/
+/test-results/

@@ -2,6 +2,7 @@ import { Then, When } from '@cucumber/cucumber';
 import PageFactory from '../pageobjects/page.factory';
 import LoginPage from '../pageobjects/login.page';
 import { elementIsDisplayed, checkUrl } from '../utils/clickActions';
+import { logger } from "../../support/logger.ts";
 
 const loginPage = PageFactory.getPage('login') as LoginPage;
 
@@ -11,6 +12,7 @@ When(/^I login with (\w+) and enter (.+)$/, async (loginOption: string, loginEma
 });
 
 Then(/^I should see a flash message saying (.*)$/, async (message: string) => {
+    logger.info(`Validation message is displayed ${message}`)
     await loginPage.checkErrorMessage(message);
 });
 
