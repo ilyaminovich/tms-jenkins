@@ -1,0 +1,4 @@
+{
+    "INVALID_LOGIN_OR_PASSWORD": "Указан неверный логин или пароль",
+    "EMAIL_OR_PHONE_NUMBER_REQUIRED": "Укажите адрес электронной почты или номер телефона"
+}

@@ -1,0 +1,32 @@
+{
+    "USER_VALID": [
+      {
+        "EMAIL": "john.doe@example.com",
+        "PASSWORD": "password123"
+      },
+      {
+        "PHONE": "+375291030356",
+        "PASSWORD": "qwerty456"
+      }
+    ],
+    "USER_INVALID": [
+        {
+          "EMAIL": "john2.doe@example.com",
+          "PASSWORD": "password123"
+        },
+        {
+          "PHONE": "+3752912345",
+          "PASSWORD": "1234"
+        }
+      ],
+      "USER_INVALID_DATA": [
+        {
+          "EMAIL": "john.doeexample.com",
+          "PASSWORD": "password123"
+        },
+        {
+          "PHONE": "+375-345-JH-56",
+          "PASSWORD": "1234"
+        }
+      ]
+  }

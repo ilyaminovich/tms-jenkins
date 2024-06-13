@@ -1,5 +1,5 @@
 node_modules
-.vscode
+.vscode/
 HW_24_cypress/cypress/downloads/
 HW_24_cypress/cypress/screenshots/
 HW_24_cypress/cypress/videos/
